@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <!-- Не работает с DropDown -->
+<!--  <link rel="stylesheet" th:href="jquery-ui.min.css" type="text/css">-->
+<!--  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" th:href="materialize.min.css">
+
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">-->
+<!--  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>-->
+
+  <link rel="stylesheet" th:href="style.css" type="text/css">
+
+</head>
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Starter Template</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+
+        <p><b>12 столбцов</b>><br>
+          Наша стандартная сетка имеет 12 столбцов. Независимо от размера браузера, каждый из этих столбцов всегда будет иметь одинаковую ширину.</p>
+
+        <div class="row">
+          <div class="col s1">1</div>
+          <div class="col s1">2</div>
+          <div class="col s1">3</div>
+          <div class="col s1">4</div>
+          <div class="col s1">5</div>
+          <div class="col s1">6</div>
+          <div class="col s1">7</div>
+          <div class="col s1">8</div>
+          <div class="col s1">9</div>
+          <div class="col s1">10</div>
+          <div class="col s1">11</div>
+          <div class="col s1">12</div>
+        </div>
+
+        <div class="row">
+          <div class="col s1" >
+<!--            <input class="datepicker" type="data" id="date21" value="Дата" />-->
+            <input type="date" class="datepicker">
+          </div>
+          <div class="col offset-s6 s2" >
+            <input type="date" class="datepicker">
+          </div>
+          <div class="col offset-s1 s2">
+            <input type="text" value="timepicker---string">
+          </div>
+        </div>
+
+        <p><b>Столбцы живут внутри строк</b>><br>
+          ДПомните, когда вы создаете макет, что все столбцы должны содержаться внутри строки и что вы должны добавить класс colво внутренние элементы div, чтобы превратить их в столбцы.</p>
+        <div class="row">
+          <div class="col s12">This div is 12-columns wide on all screen sizes</div>
+          <div class="col s6">6-columns (one-half)</div>
+          <div class="col s6">6-columns (one-half)</div>
+        </div>
+
+        <p><b>Смещения</b>><br>
+          Для смещения просто добавьте offset-s2к классу, где sобозначает префикс класса экрана (s = маленький, m = средний, l = большой), а число после него — это количество столбцов, на которое вы хотите сместить.</p>
+        <div class="row">
+          <div class="col s12"><span class="flow-text">This div is 12-columns wide on all screen sizes</span></div>
+          <div class="col s6 offset-s6"><span class="flow-text">6-columns (offset-by-6)</span></div>
+        </div>
+
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Section 1</h5>
+          <p>Stuff</p>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Section 2</h5>
+          <p>Stuff</p>
+        </div>
+        <div class="divider"></div>
+        <div class="section">
+          <h5>Section 3</h5>
+          <p>Stuff</p>
+        </div>
+
+        <div class="row">
+          <div class="col s12">
+
+            <!-- Dropdown Trigger -->
+            <h3>Drop Down Demo</h3>
+            <ul id="dropdown" class="dropdown-content">
+              <li><a href="#">Inbox<span class="badge">12</span></a></li>
+              <li><a href="#!">Unread<span class="new badge">4</span></a></li>
+              <li><a href="#">Sent</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Outbox<span class="badge">14</span></a></li>
+            </ul>
+            <a class="btn dropdown-button" href="#" data-activates="dropdown">Mail Box<i class="mdi-navigation-arrow-drop-down right"></i></a>
+            <!-- Dropdown Trigger -->
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col s4">
+            <input type="date" class="datepicker" id="d1">
+          </div>
+          <div class="col s4">
+            <input type="date" class="datepicker" id="d2">
+          </div>
+          <div class="col s4">
+            <ul id="dropdown2" class="dropdown-content">
+              <li><a href="#!">one<span class="badge">1</span></a></li>
+              <li><a href="#!">two<span class="new badge">1</span></a></li>
+              <li><a href="#!">three</a></li>
+            </ul>
+            <a class="btn dropdown-button" href="#!" data-activates="dropdown2">Dropdown<i class="material-icons right">arrow_drop_down</i></a>
+
+            <!-- Dropdown Trigger -->
+            <h3>Drop Down Demo</h3>
+            <ul id="dropdown3" class="dropdown-content">
+              <li><a href="#">Inbox<span class="badge">12</span></a></li>
+              <li><a href="#!">Unread<span class="new badge">4</span></a></li>
+              <li><a href="#">Sent</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Outbox<span class="badge">14</span></a></li>
+            </ul>
+            <a class="btn dropdown-button" href="#" data-activates="dropdown3">Mail Box<i class="mdi-navigation-arrow-drop-down right"></i></a>
+            <!-- Dropdown Trigger -->
+
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col s12"><a href="https://materializecss.com/grid.html"><h5>Дизайн страницы Materialise</h5> </a> </div>
+
+        </div>
+        <div class="row">
+          <div class="col s12"><a href="https://www.tutorialspoint.com/materialize/materialize_badges.htm"><h5>Примеры страницы Materialise</h5></a> </div>
+        </div>
+
+      </div>
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Speeds up development</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Easy to work with</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
+<!--  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+  <script type="text/javascript" th:src="jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" th:src="materialize.min.js"></script>
+<!--  <script type="text/javascript" th:src="jquery-ui.min.js"></script>-->
+<!--  <script type="text/javascript" th:src="jquery.ui.datepicker-ru.js"></script>-->
+
+  <!--  <script type="text/javascript" th:src="jquery-2.1.1.min.js"></script>-->
+  <script type="text/javascript" th:src="first.js"></script>
+
+
+<!--  <script type="text/javascript">-->
+<!--    jQuery(document).ready(function(){-->
+<!--      $.datepicker.setDefaults( $.datepicker.regional[ "ru" ] );-->
+<!--      $( "#datepicker1" ).datepicker();-->
+<!--      $( "#date" ).datepicker();-->
+<!--    } );-->
+<!--  </script>-->
+
+  </body>
+</html>
